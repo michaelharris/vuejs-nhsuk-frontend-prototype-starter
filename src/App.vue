@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header class="nhsuk-header" role="banner">
-      <div class="nhsuk-width-container nhsuk-header__container">
+      <div class="nhsuk-width-container-fluid nhsuk-header__container">
         <div class="nhsuk-header__logo">
           <a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
             <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
@@ -68,7 +68,7 @@
       </div>
 
 
-      <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+      <nav class="nhsuk-header__navigationremove" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
         <p class="nhsuk-header__navigation-title">
           <span id="label-navigation">Menu</span>
           <button class="nhsuk-header__navigation-close" id="close-menu">
@@ -78,7 +78,7 @@
             <span class="nhsuk-u-visually-hidden">Close menu</span>
           </button>
         </p>
-        <ul class="nhsuk-header__navigation-list">
+        <ul class="nhsuk-header__navigation-list header-fluid-list ">
           <li class="nhsuk-header__navigation-item">
             <router-link class="nhsuk-header__navigation-link" to="/">Home</router-link>
           </li>
@@ -100,7 +100,7 @@
 
     </header>
     <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-      <div class="nhsuk-width-container">
+      <div class="nhsuk-width-container-fluid">
         <ol class="nhsuk-breadcrumb__list">
 
           <li class="nhsuk-breadcrumb__item">
@@ -114,7 +114,7 @@
       </div>
     </nav>
 
-    <div class="nhsuk-width-container ">
+    <div class="nhsuk-width-container-fluid ">
       <main class="nhsuk-main-wrapper " id="maincontent" role="main">
         <router-view/>
       </main>
@@ -122,7 +122,7 @@
 
     <footer role="contentinfo">
       <div class="nhsuk-footer" id="nhsuk-footer">
-        <div class="nhsuk-width-container">
+        <div class="nhsuk-width-container-fluid">
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
               <p class="nhsuk-u-secondary-text-color nhsuk-u-font-size-16">This website only stores the cookies that are needed to make it work. Read more about how
@@ -160,6 +160,11 @@
 
 <style lang="scss">
   @import "node_modules/nhsuk-frontend/packages/nhsuk";
+
+.header-fluid-list {
+  justify-content: normal
+}
+
 </style>
 
 <script src="../node_modules/nhsuk-frontend/dist/nhsuk.min.js" defer></script>
