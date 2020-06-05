@@ -1,4 +1,4 @@
-# web-ui
+# VueJS starter project for prototyping with nhsuk-frontend styles
 
 ## Project setup
 ```
